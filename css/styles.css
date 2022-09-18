@@ -1,0 +1,188 @@
+* {
+	box-sizing: border-box;
+}
+
+#attribution {
+  font-family: sans-serif;
+  font-size: 1.4rem;
+}
+
+#attribution a {
+  color: rgb(195, 215, 255);
+}
+
+body {
+	background: url("../img/dominik-hofbauer-qqKjTraZOXs-unsplash.jpg");
+  background-size: 100%;
+  font-family: sans-serif;
+	font-size: 1.6rem;
+	margin: auto;
+}
+
+.bottom {
+	position: absolute;
+	bottom: 0;
+}
+
+.center {
+	left: 50%;
+	position: absolute;
+	transform: translateX(-50%);
+}
+
+.center.middle {
+	transform: translate(-50%, -50%);
+}
+
+#confirmation {
+  font-size: 1.4rem;
+}
+
+.container {
+	position: relative;
+}
+
+@font-face{
+	font-family: digital-7;
+	src: url("../fonts/digital-7 (mono).ttf");
+}
+
+@font-face{
+	font-family: lcd;
+	src: url("../fonts/LCDAT&TPhone.ttf");
+}
+
+footer, h1, main > p {
+  text-shadow:
+      0 0 2px rgba(10, 20, 30, 0.8),
+      0 0 4px rgba(10, 20, 30, 0.8),
+      0 0 8px rgba(10, 20, 30, 0.8),
+      0 0 16px rgb(165, 185, 235),
+      0 0 32px rgb(165, 185, 235);
+  text-align: center;
+}
+
+#form {
+  background: rgba(10, 20, 30, 0.8);
+  border-radius: 5px;
+  color: rgb(195, 215, 235);
+  margin: 0 auto;
+  max-width: 720px;
+  padding: 32px;
+  width: 80%;
+}
+
+#generateButton {
+  margin: 32px auto 0;
+}
+
+#generateButton:hover {
+  background-color: rgb(100, 127.5, 255);
+  cursor: pointer;
+}
+
+h1 {
+  line-height: 4rem;
+}
+
+h1, main > p, .number {
+  font-family: lcd;
+}
+
+.hidden {
+	display: none;
+}
+
+html {
+	/* Setting a base font size of 10px give us easier rem calculations
+	   Info: 1rem === 10px, 1.5rem === 15px, 2rem === 20px and so forth */
+	font-size: 10px;
+}
+
+input {
+  display: block;
+  height: 24px;
+  margin: 10px 0 32px;
+  width: 100%;
+}
+
+main {
+  color: rgb(245, 255, 255);
+	height: calc(100vh - 100px);
+}
+
+main > p {
+  line-height: 1.6rem;
+}
+
+.middle {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+p > button {
+  background: linear-gradient(rgba(95, 115, 135, 0.95), rgba(195, 215, 235, 0.95), rgba(95, 115, 135, 0.95));
+  border-style: none;
+  margin-bottom: 20px;
+  padding: 2px;
+}
+
+p > button:active {
+  border-style: solid;
+  padding: 0;
+}
+
+#resultContainer {
+  background: linear-gradient(rgba(95, 115, 135, 0.95), rgba(195, 215, 235, 0.95), rgba(95, 115, 135, 0.95));
+  border: 1px solid rgba(10, 20, 30, 0.8);
+  border-radius: 5px;
+  color: rgba(10, 20, 30, 0.8);
+  padding: 0 16px 24px;
+  position: absolute;
+  text-align: center;
+  width: 250px;
+}
+
+#resultContainer button, #generateButton {
+  background: linear-gradient(rgba(10, 20, 30, 0.8), rgba(60, 70, 80, 0.8), rgba(10, 20, 30, 0.8));
+  background-color: rgb(112.5, 150, 255);
+  border-radius: 2px;
+  border-style: none;
+  color: rgb(195, 215, 235);
+  display: block;
+  margin: 8px auto;
+  padding: 10px 0;
+  width: 100px;
+}
+
+.number {
+  margin: 5px;
+}
+
+.number:last-of-type {
+  margin-bottom: 16px;
+}
+
+.right {
+	position: absolute;
+	right: 0;
+}
+
+select {
+  height: 24px;
+  margin: 10px 0 5px;
+  width: 100%;
+}
+
+.top {
+	position: absolute;
+	top: 0;
+}
+
+@media (orientation: landscape) {
+  body {
+	  background: url("../img/dominik-hofbauer-qqKjTraZOXs-unsplash.jpg");
+	  background-size: 100%;
+  }
+}

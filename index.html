@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<!--page title-->
+	<title>Phone Number Generator</title>
+
+	<!--page description-->
+	<meta name="description" content="Generate random phone numbers from random countries in bulk.">
+
+	<!--character encoding-->
+	<meta charset="utf-8">
+
+	<!--device width-->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!--Open Graph tags-->
+	<meta property="og:title" content="Phone Number Generator">
+	<meta property="og:description" content="Generate random phone numbers from random countries in bulk.">
+	<meta property="og:image" content="img/og-image.jpg">
+
+	<!--Twitter cards-->
+	<meta name="twitter:title" content="Phone Number Generator">
+
+	<!--stylesheets-->
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+
+	<!--scripts-->
+	<script defer type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script defer type="text/javascript">window.jQuery || document.write("<script type='text/javascript' src='js/vendor/jquery-3.6.0.min.js'><\/script>")</script>
+	<script defer type="text/javascript" src="js/scripts.js"></script>
+
+</head>
+
+<body>
+
+  <main class="container">
+
+    <h1 id="title">Phone Number Generator</h1>
+
+    <p id="description">Generate random phone numbers from random countries in bulk.</p>
+
+    <div class="container" id="form">
+
+      <label>Select a country/countries:
+
+        <p>
+          <select id="countrySelect" multiple required>
+            <option disabled selected>Fetching country list...</option>
+          </select>
+          <button onclick="selectAll();">Select All</button>
+          <button onclick="deselectAll();">Deselect All</button>
+        </p>
+
+      </label>
+
+      <label>How many phone numbers do you want to generate?
+
+        <input id="quantity" min="1" required type="number" value="1"></input>
+
+      </label>
+
+      <label>If you have a Randommer.io API key, enter it here:
+
+        <input id="xApiKey" placeholder="2229467e25554a80bd372eb68ce6c74f" type="text"></input>
+
+      </label>
+
+      <button id="generateButton" onclick="generateNumbers($('#quantity').val());">Generate</button>
+
+      <div class="center hidden middle" id="resultContainer">
+
+        <h2>Results</h2>
+
+        <div id="results"></div>
+
+        <span id="confirmation"></span>
+
+        <button onclick="copy();">
+          Copy to Clipboard
+        </button>
+
+        <button onclick="hide($('#resultContainer'));">Close</button>
+
+      </div>
+
+    </div>
+    
+    <p id="attribution">Background <a href="https://unsplash.com/photos/qqKjTraZOXs">image</a> by <a href="https://unsplash.com/@dominikhofbauer">dominik hofbauer</a> on <a href="https://unsplash.com/">Unsplash</a>.</p>
+
+  	<!--Footer-->
+  	<footer>
+  
+  		<div id="copyright">
+  
+  			<p>&copy Sherpad Ndabambi <span id="footerYear"></span></p>
+  
+  		</div>
+  
+  	</footer>
+
+	</main>
+
+</body>
+
+</html>
